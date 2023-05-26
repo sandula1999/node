@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>office Bearers</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha3/css/bootstrap.min.css"
+      integrity="sha512-iGjGmwIm1UHNaSuwiNFfB3+HpzT/YLJMiYPKzlQEVpT6FWi5rfpbyrBuTPseScOCWBkRtsrRIbrTzJpQ02IaLA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+          <div class="card shadow">
+            <div class="card-header bg-dark">
+              <h3 class="text-light">Add New Office Bearer</h3>
+            </div>
+            <div class="card-body p-4">
+              <form action="/add" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control form-control-lg"
+                    id="name"
+                    value=""
+                    placeholder="Enter Name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="Designation">Designation</label>
+                  <input
+                    type="text"
+                    name="designations"
+                    class="form-control form-control-lg"
+                    id="designations"
+                    value=""
+                    placeholder="Enter designation"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="Massage">Massage</label>
+                  <textarea
+                    class="form-control form-control-lg"
+                    name="massage"
+                    id="Massage"
+                    cols="30"
+                    rows="12"
+                    placeholder="Enter Massage"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3 d-grid">
+                  <label for="Image">Select Image</label>
+                  <input
+                    type="file"
+                    name="image"
+                    class="form-control form-control-lg"
+                    id="image"
+                    value=""
+                    required
+                  />
+                </div>
+                <div class="form-group mb-4">
+                  <button type="submit" class="btn btn-primary bg-dark btn-lg">
+                    Add New
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0-alpha3/js/bootstrap.bundle.min.js"
+      integrity="sha512-vIAkTd3Ary9rwf0lrb9kIipyIkavKpYGnyopBXs6SiLfNSzAvCNvvQvKwBV5Xlag4O8oZpZ5U5n4bHoErGQxjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

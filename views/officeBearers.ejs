@@ -1,0 +1,64 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+>
+  <h1 class="h2">Office Bearers List</h1>
+
+  <div class="btn-toolbar mb-2 mb-md 0">
+    <div class="btn-group me-2">
+      <a href="/add" class="btn btn-sm btn-outline-secondary">+ Add New</a>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row my-4">
+    <div class="col-lg-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center">
+          <thead>
+            <tr class="table-dark">
+              <th>Image</th>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Massage</th>
+              <th class="t">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% officeBearers.forEach(element => { %>
+            <tr class="align-middle">
+              <td>
+                <img src="/uploads/<%= element.image %>" style="width: 100px" />
+              </td>
+              <td><%= element.name %></td>
+              <td><%= element.designations %></td>
+              <td><%= element.massage %></td>
+              <td>
+                <div class="d-flex flex-row justify-content-center gap-2">
+                  <a
+                    href="/edit/<%= element._id %>"
+                    type="button"
+                    class="btn btn-warning btn-small"
+                  >
+                    <i class="bi bi-pencil"></i>
+                  </a>
+
+                  <form
+                    action="/edit/<%= element._id %>?_method=DELETE"
+                    method="POST"
+                    class="position-relative"
+                  >
+                    <button type="submit" class="btn btn-danger btn-small">
+                      <i class="bi bi-person-x"></i>
+                    </button>
+                  </form>
+                </div>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
